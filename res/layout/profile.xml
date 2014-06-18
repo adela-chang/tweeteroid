@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/wrapper"
+  android:background="#fff" android:layout_width="wrap_content" android:layout_height="wrap_content">
+  <ImageView
+  	android:id="@+id/profileImage"
+  	android:layout_width="wrap_content"
+  	android:layout_height="wrap_content"
+  	android:layout_alignLeft="@+id/wrapper"
+  	android:paddingLeft="5dip"
+  	android:paddingTop="5dip" android:layout_marginLeft="5dip">
+  </ImageView>
+  <TextView
+  	android:id="@+id/profileName"
+  	android:layout_width="wrap_content"
+  	android:layout_height="wrap_content"
+  	android:textColor="#FF000000"
+  	android:layout_alignTop="@+id/profileImage"
+  	android:layout_toRightOf="@+id/profileImage"
+  	android:paddingLeft="10dip"
+  	android:textStyle="bold" android:text="test">
+  </TextView>
+  <TextView
+  	android:id="@+id/profileUsername"
+  	android:layout_width="wrap_content"
+  	android:layout_height="wrap_content"
+  	android:textColor="#FF000000"
+  	android:layout_below="@+id/profileName"
+  	android:layout_toRightOf="@+id/profileImage"
+  	android:paddingLeft="10dip"
+  	android:text="test">
+  </TextView>
+  <TextView
+  	android:id="@+id/profileDescription"
+  	android:layout_width="fill_parent"
+  	android:layout_height="wrap_content"
+  	android:layout_below="@+id/profileImage"
+  	android:paddingTop="15dip"
+  	android:paddingBottom="15dip" android:textStyle="italic" android:textColor="#FF666666" android:paddingRight="10dip" android:paddingLeft="10dip" android:text="test">
+  </TextView>
+  <RelativeLayout
+  	android:id="@+id/stats"
+  	android:layout_below="@+id/profileDescription"
+  	android:layout_height="wrap_content"
+  	android:orientation="horizontal"
+  	android:layout_width="wrap_content" android:paddingLeft="10dip" android:paddingRight="10dip">
+  	<TextView
+  		android:id="@+id/numTweets"
+  		android:layout_width="wrap_content"
+  		android:layout_height="wrap_content"
+  		android:textColor="#FF000000" android:text="test" android:textStyle="bold">
+  	</TextView>
+  	<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_below="@+id/numTweets" android:layout_alignLeft="@+id/numTweets" android:id="@+id/Tweets" android:text="Tweets" android:textSize="12sp" android:textColor="#000"></TextView>
+  	<LinearLayout android:layout_toRightOf="@+id/Tweets" android:layout_height="wrap_content" android:layout_alignBottom="@+id/Tweets" android:layout_alignTop="@+id/numTweets" android:id="@+id/line1" android:layout_width="1px" android:background="#999999" android:layout_marginLeft="10dip" android:layout_marginRight="10dip"></LinearLayout>
+  <TextView
+  		android:id="@+id/numFollowers"
+  		android:layout_width="wrap_content"
+  		android:layout_height="wrap_content"
+  		android:textColor="#FF000000" android:text="test" android:layout_toRightOf="@id/line1" android:layout_alignTop="@id/line1" android:textStyle="bold">
+  	</TextView>
+  <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_below="@+id/numFollowers" android:layout_alignLeft="@+id/numFollowers" android:id="@+id/Followers" android:text="Followers" android:textSize="12sp" android:textColor="#000"></TextView>
+  <LinearLayout android:layout_toRightOf="@+id/Followers" android:layout_height="wrap_content" android:layout_alignBottom="@+id/Followers" android:id="@+id/line2" android:layout_alignTop="@+id/numFollowers" android:layout_width="1px" android:background="#999999" android:layout_marginLeft="10dip" android:layout_marginRight="10dip"></LinearLayout>
+  <TextView
+  		android:id="@+id/numFollowees"
+  		android:layout_width="wrap_content"
+  		android:layout_height="wrap_content"
+  		android:textColor="#FF000000" android:text="test" android:layout_toRightOf="@id/line2" android:layout_alignTop="@id/line2" android:textStyle="bold">
+  	</TextView>
+  <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_below="@+id/numFollowees" android:layout_alignLeft="@+id/numFollowees" android:id="@+id/Followees" android:textSize="12sp" android:textColor="#000" android:text="Following"></TextView>
+  </RelativeLayout>
+  <Button android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/done" android:layout_alignRight="@id/profileDescription" android:layout_below="@id/profileDescription" android:layout_alignBottom="@id/Followees" android:text="Close"></Button>
+ 
+</RelativeLayout>

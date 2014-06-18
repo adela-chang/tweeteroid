@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" android:background="#ffffff">
+<RelativeLayout android:id="@+id/relativeLayout1" xmlns:android="http://schemas.android.com/apk/res/android" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_gravity="top" android:background="#F8F8F8">
+    
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@+id/bTweet" android:layout_alignTop="@+id/bTweet" android:layout_alignBottom="@+id/bTweet" android:id="@+id/charCount" android:text="140" android:gravity="center_vertical"></TextView>
+    <ImageView android:scaleType="fitXY" android:layout_toLeftOf="@+id/charCount" android:layout_alignBottom="@+id/bTweet" android:layout_marginRight="20dip" android:layout_marginBottom="5dip" android:id="@+id/refreshPic" android:src="@drawable/ic_menu_refresh" android:layout_height="25dip" android:layout_width="25dip"></ImageView>
+    <ProgressBar style="@android:style/Widget.ProgressBar.Inverse"
+     android:layout_toLeftOf="@+id/charCount" android:clickable="true" android:progress="100" android:layout_marginRight="20dip" android:layout_alignBottom="@+id/bTweet" android:layout_marginBottom="5dip" android:visibility="invisible" android:id="@+id/refreshAnimation" android:layout_height="25dip" android:layout_width="25dip" android:padding="5dip"></ProgressBar>
+    <EditText android:text="What's happening?" android:layout_width="fill_parent" android:layout_height="wrap_content" android:id="@+id/post" android:layout_alignParentLeft="true" android:maxLength="140" android:textColor="#999999" android:clickable="true" android:cursorVisible="false"></EditText>
+    <Button android:layout_height="wrap_content" android:text="Tweet!" android:id="@+id/bTweet" android:layout_width="wrap_content" android:layout_below="@+id/post" android:layout_alignRight="@+id/post"></Button>
+    <FrameLayout android:layout_below="@+id/post" android:id="@+id/frameLayout1" android:layout_height="wrap_content" android:layout_width="fill_parent" android:layout_alignBottom="@id/bTweet">
+        <RelativeLayout android:id="@+id/frameHome" android:layout_height="fill_parent" android:layout_width="fill_parent">
+            <TextView android:paddingRight="10dip" android:paddingTop="5dip" android:paddingLeft="10dip" android:textStyle="bold" android:clickable="true" android:layout_height="wrap_content" android:textColor="#000" android:id="@+id/timeline" android:text="Timeline" android:textSize="16sp" android:background="#fff" android:layout_width="wrap_content" android:layout_toRightOf="@+id/leftMargin" android:layout_alignParentBottom="true" android:visibility="visible"></TextView>
+            <LinearLayout android:background="#EEEEEE" android:id="@+id/rightMargin" android:layout_height="1px" android:layout_width="wrap_content" android:layout_toRightOf="@+id/timeline" android:layout_alignBottom="@+id/timeline" android:layout_alignParentRight="true"></LinearLayout>
+            <TextView android:paddingRight="10dip" android:paddingTop="5dip" android:paddingLeft="10dip" android:layout_height="wrap_content" android:id="@+id/mentions" android:text="Mentions" android:textSize="16sp" android:layout_width="wrap_content" android:layout_toRightOf="@+id/timeline" android:layout_alignTop="@+id/timeline" android:layout_alignBottom="@+id/timeline" android:textColor="#000"></TextView>
+            <LinearLayout android:background="#EEEEEE" android:id="@+id/leftLine" android:layout_height="wrap_content" android:layout_width="1px" android:layout_toLeftOf="@+id/timeline" android:layout_alignTop="@+id/timeline" android:layout_alignBottom="@+id/timeline"></LinearLayout>
+            <LinearLayout android:background="#EEEEEE" android:id="@+id/rightLine" android:layout_height="wrap_content" android:layout_width="1px" android:layout_toRightOf="@+id/timeline" android:layout_alignTop="@+id/timeline" android:layout_alignBottom="@+id/timeline"></LinearLayout>
+            <LinearLayout android:background="#EEEEEE" android:id="@+id/topLine" android:layout_height="1px" android:layout_width="wrap_content" android:layout_above="@+id/timeline" android:layout_alignLeft="@+id/timeline" android:layout_alignRight="@+id/timeline"></LinearLayout>
+            <LinearLayout android:background="#EEEEEE" android:id="@+id/leftMargin" android:layout_height="1px" android:layout_width="5dip" android:layout_alignBottom="@id/bTweet" android:layout_alignParentLeft="true"></LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout android:layout_height="fill_parent" android:layout_width="fill_parent" android:id="@+id/frameMentions" android:visibility="invisible">
+            <TextView android:paddingRight="10dip" android:paddingTop="5dip" android:paddingLeft="10dip" android:layout_toRightOf="@+id/LinearLayout08" android:clickable="true" android:layout_height="wrap_content" android:id="@+id/mTimeline" android:layout_alignParentBottom="true" android:text="Timeline" android:textSize="16sp" android:layout_width="wrap_content" android:textColor="#000"></TextView>
+            <TextView android:paddingRight="10dip" android:paddingTop="5dip" android:paddingLeft="10dip" android:layout_toRightOf="@+id/mTimeline" android:textStyle="bold" android:layout_height="wrap_content" android:textColor="#000" android:id="@+id/mMentions" android:layout_alignBottom="@+id/mTimeline" android:text="Mentions" android:textSize="16sp" android:layout_alignTop="@+id/mTimeline" android:layout_width="wrap_content" android:background="#fff"></TextView>
+            <LinearLayout android:layout_alignBottom="@+id/mMentions" android:layout_toRightOf="@+id/mMentions" android:background="#EEEEEE" android:id="@+id/mRightLine" android:layout_height="wrap_content" android:layout_alignTop="@+id/mMentions" android:layout_width="1px"></LinearLayout>
+            <LinearLayout android:layout_alignBottom="@+id/mMentions" android:background="#EEEEEE" android:id="@+id/mLeftLine" android:layout_height="wrap_content" android:layout_alignTop="@+id/mMentions" android:layout_toLeftOf="@+id/mMentions" android:layout_width="1px"></LinearLayout>
+            <LinearLayout android:layout_alignRight="@+id/mMentions" android:layout_alignLeft="@+id/mMentions" android:background="#EEEEEE" android:id="@+id/mTopLine" android:layout_height="1px" android:layout_above="@+id/mMentions" android:layout_width="wrap_content"></LinearLayout>
+            <LinearLayout android:layout_alignParentRight="true" android:layout_toRightOf="@+id/mMentions" android:layout_alignParentBottom="true" android:background="#EEEEEE" android:id="@+id/mRightMargin" android:layout_height="1px" android:layout_width="wrap_content"></LinearLayout>
+            <LinearLayout android:layout_alignParentBottom="true" android:background="#EEEEEE" android:layout_alignParentLeft="true" android:id="@+id/mLeftMargin" android:layout_height="1px" android:layout_toLeftOf="@id/mMentions" android:layout_width="wrap_content"></LinearLayout>
+        </RelativeLayout>
+    </FrameLayout>
+</RelativeLayout>
+<LinearLayout android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:layout_below="@+id/relativeLayout1">
+<ScrollView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/relativeLayout1" android:id="@+id/scrollView1" android:layout_alignLeft="@+id/sn" android:layout_alignRight="@+id/sn" android:layout_marginTop="10dip">
+    <LinearLayout android:id="@+id/scroll" android:layout_width="fill_parent" android:layout_height="fill_parent" android:orientation="vertical">
+    	<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/load" android:text="loading..."></TextView>
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>
+</RelativeLayout>
